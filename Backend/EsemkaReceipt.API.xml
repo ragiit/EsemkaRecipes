@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EsemkaReceipt.API</name>
+    </assembly>
+    <members>
+        <member name="M:EsemkaReceipt.API.Controllers.AuthController.AuthPost(EsemkaReceipt.API.Controllers.AuthModel)">
+             <summary>
+             Digunakan untuk melakukan Authentikasi.
+             </summary>
+             <returns>Credentials User</returns>
+             <remarks>
+             Sample request:
+            
+                 {
+                    "username": "bmoret6",
+                    "password": "vU3m9x"
+                 }
+            
+             </remarks>
+             <response code="200">Berhasil melakukan Sign-In dan Mengembalikan data user.</response>
+             <response code="404">Data user tidak ditemukan</response>
+             <response code="400">Permintaan tidak valid.</response>
+             <response code="500">Server Bermasalah.</response>
+        </member>
+        <member name="M:EsemkaReceipt.API.Controllers.CategoriesController.CategoryGet">
+            <response code="200">Berhasil dan mendapatkan list data Category.</response>
+            <response code="401">Unauthorized, User harus melakukan Sign-in terlebih dahulu.</response>
+            <response code="400">Permintaan tidak valid.</response>
+            <response code="404">Data tidak ditemukan.</response>
+            <response code="500">Server Bermasalah.</response>
+        </member>
+        <member name="M:EsemkaReceipt.API.Controllers.MeController.MeGet">
+            <response code="200">Berhasil dan mendapatkan data User Login.</response>
+            <response code="401">Unauthorized, User harus melakukan Sign-in terlebih dahulu.</response>
+            <response code="400">Permintaan tidak valid.</response>
+            <response code="404">Data tidak ditemukan.</response>
+            <response code="500">Server Bermasalah.</response>
+        </member>
+        <member name="M:EsemkaReceipt.API.Controllers.MeController.LikedRecipesGet">
+            <response code="200">Berhasil dan mendapatkan list data Liked Recipes.</response>
+            <response code="401">Unauthorized, User harus melakukan Sign-in terlebih dahulu.</response>
+            <response code="400">Permintaan tidak valid.</response>
+            <response code="404">Data tidak ditemukan.</response>
+            <response code="500">Server Bermasalah.</response>
+        </member>
+        <member name="M:EsemkaReceipt.API.Controllers.RecipesController.RecipeGet(System.Int32,System.String)">
+            <response code="200">Berhasil dan mendapatkan list data Recipe.</response>
+            <response code="401">Unauthorized, User harus melakukan Sign-in terlebih dahulu.</response>
+            <response code="400">Permintaan tidak valid.</response>
+            <response code="404">Data tidak ditemukan.</response>
+            <response code="500">Server Bermasalah.</response>
+        </member>
+        <member name="M:EsemkaReceipt.API.Controllers.RecipesController.RecipeDetailGet(System.Int32)">
+            <response code="200">Berhasil dan mendapatkan list data Recipe.</response>
+            <response code="401">Unauthorized, User harus melakukan Sign-in terlebih dahulu.</response>
+            <response code="400">Permintaan tidak valid.</response>
+            <response code="404">Data tidak ditemukan.</response>
+            <response code="500">Server Bermasalah.</response>
+        </member>
+        <member name="M:EsemkaReceipt.API.Controllers.RecipesController.LikeRecipeGet(System.Int32)">
+            <response code="200">Berhasil dan mendapatkan list data Recipe.</response>
+            <response code="401">Unauthorized, User harus melakukan Sign-in terlebih dahulu.</response>
+            <response code="400">Permintaan tidak valid.</response>
+            <response code="404">Data tidak ditemukan.</response>
+            <response code="500">Server Bermasalah.</response>
+        </member>
+    </members>
+</doc>

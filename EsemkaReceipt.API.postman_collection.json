@@ -1,0 +1,1409 @@
+{
+	"info": {
+		"_postman_id": "93f12a91-00a7-4bc1-b4be-0f3b33ef3f52",
+		"name": "EsemkaReceipt.API",
+		"description": "Backend API untuk aplikasi mobile EsemkaReceipt. \n\n Untuk Path gambar Category bisa akses link: http://url:5000/images/categories/{NamaGambar}. Contoh:  <a href=\"http://localhost:5000/images/categories/breakfast_recipes.png\"> http://localhost:5000/images/categories/breakfast_recipes.png </a> \n\n Untuk Path gambar Recipe bisa akses link: http://url:5000/iamges/recipes/{NamaGambar}. Contoh: <a href=\"http://localhost:5000/images/recipes/crispy_chickpeas.jpg\"> http://localhost:5000/images/recipes/crispy_chickpeas.jpg.png </a> \n\n Untuk Path gambar Profile bisa akses link: http://url:5000/iamges/profiles/{NamaGambar}. Contoh: <a href=\"http://localhost:5000/images/profiles/argi_purwanto.jpg\"> http://localhost:5000/images/profiles/argi_purwanto.jpg </a> \n\n Untuk URL API di mobile bisa pakai <a href=\"http://10.0.2.2:5000\"> http://10.0.2.2:5000 </a> (pakai ini karena url menggunakan localhost)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25930151"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "sign-in",
+					"item": [
+						{
+							"name": "Digunakan untuk melakukan Authentikasi.",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"test123\",\n  \"username\": \"test\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/sign-in",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"sign-in"
+									]
+								},
+								"description": "Sample request:\r\n            \r\n    {\r\n       \"username\": \"bmoret6\",\r\n       \"password\": \"vU3m9x\"\r\n    }"
+							},
+							"response": [
+								{
+									"name": "Berhasil melakukan Sign-In dan Mengembalikan data user.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "//api/sign-in",
+											"path": [
+												"",
+												"api",
+												"sign-in"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"username\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"dateOfBirth\": \"<dateTime>\",\n  \"image\": \"<string>\"\n}"
+								},
+								{
+									"name": "Permintaan tidak valid.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/sign-in",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"sign-in"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Data user tidak ditemukan",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/sign-in",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"sign-in"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server Bermasalah.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/sign-in",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"sign-in"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "sign-up",
+					"item": [
+						{
+							"name": "/api/sign-up",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"test\",\n  \"fullName\": \"Test\",\n  \"password\": \"test123\",\n  \"dateOfBirth\": \"2023-02-02\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/sign-up",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"sign-up"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"dateOfBirth\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/sign-up",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"sign-up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"username\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"dateOfBirth\": \"<dateTime>\",\n  \"image\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "me",
+					"item": [
+						{
+							"name": "liked-recipes",
+							"item": [
+								{
+									"name": "/api/me/liked-recipes",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/me/liked-recipes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me",
+												"liked-recipes"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Berhasil dan mendapatkan list data Liked Recipes.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/me/liked-recipes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"me",
+														"liked-recipes"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<integer>\",\n  \"categoryId\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"priceEstimate\": \"<integer>\",\n  \"cookingTimeEstimate\": \"<integer>\",\n  \"image\": \"<string>\",\n  \"category\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"icon\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Permintaan tidak valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/me/liked-recipes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"me",
+														"liked-recipes"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized, User harus melakukan Sign-in terlebih dahulu.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/me/liked-recipes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"me",
+														"liked-recipes"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Data tidak ditemukan.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/me/liked-recipes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"me",
+														"liked-recipes"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server Bermasalah.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/me/liked-recipes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"me",
+														"liked-recipes"
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/me",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"me"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Berhasil dan mendapatkan data User Login.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"username\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"password\": \"<string>\",\n  \"dateOfBirth\": \"<dateTime>\",\n  \"image\": \"<string>\"\n}"
+								},
+								{
+									"name": "Permintaan tidak valid.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized, User harus melakukan Sign-in terlebih dahulu.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Data tidak ditemukan.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server Bermasalah.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"me"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "categories",
+					"item": [
+						{
+							"name": "/api/categories",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Berhasil dan mendapatkan list data Category.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/categories",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"icon\": \"<string>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"icon\": \"<string>\"\n  }\n]"
+								},
+								{
+									"name": "Permintaan tidak valid.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/categories",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized, User harus melakukan Sign-in terlebih dahulu.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/categories",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Data tidak ditemukan.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/categories",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server Bermasalah.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/categories",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "recipes",
+					"item": [
+						{
+							"name": "detail",
+							"item": [
+								{
+									"name": "{recipeId}",
+									"item": [
+										{
+											"name": "/api/recipes/detail/:recipeId",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/recipes/detail/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"recipes",
+														"detail",
+														"1"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Berhasil dan mendapatkan list data Recipe.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/recipes/detail/:recipeId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"recipes",
+																"detail",
+																":recipeId"
+															],
+															"variable": [
+																{
+																	"key": "recipeId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<integer>\",\n  \"categoryId\": \"<integer>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"priceEstimate\": \"<integer>\",\n  \"cookingTimeEstimate\": \"<integer>\",\n  \"image\": \"<string>\",\n  \"category\": {\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"icon\": \"<string>\"\n  }\n}"
+												},
+												{
+													"name": "Permintaan tidak valid.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/recipes/detail/:recipeId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"recipes",
+																"detail",
+																":recipeId"
+															],
+															"variable": [
+																{
+																	"key": "recipeId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Unauthorized, User harus melakukan Sign-in terlebih dahulu.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/recipes/detail/:recipeId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"recipes",
+																"detail",
+																":recipeId"
+															],
+															"variable": [
+																{
+																	"key": "recipeId"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Data tidak ditemukan.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/recipes/detail/:recipeId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"recipes",
+																"detail",
+																":recipeId"
+															],
+															"variable": [
+																{
+																	"key": "recipeId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Server Bermasalah.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/recipes/detail/:recipeId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"recipes",
+																"detail",
+																":recipeId"
+															],
+															"variable": [
+																{
+																	"key": "recipeId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "like-recipe",
+							"item": [
+								{
+									"name": "/api/recipes/like-recipe",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/recipes/like-recipe?recipeId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"recipes",
+												"like-recipe"
+											],
+											"query": [
+												{
+													"key": "recipeId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Berhasil dan mendapatkan list data Recipe.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/recipes/like-recipe?recipeId=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"recipes",
+														"like-recipe"
+													],
+													"query": [
+														{
+															"key": "recipeId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "<boolean>"
+										},
+										{
+											"name": "Permintaan tidak valid.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/recipes/like-recipe?recipeId=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"recipes",
+														"like-recipe"
+													],
+													"query": [
+														{
+															"key": "recipeId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized, User harus melakukan Sign-in terlebih dahulu.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/recipes/like-recipe?recipeId=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"recipes",
+														"like-recipe"
+													],
+													"query": [
+														{
+															"key": "recipeId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Data tidak ditemukan.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/recipes/like-recipe?recipeId=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"recipes",
+														"like-recipe"
+													],
+													"query": [
+														{
+															"key": "recipeId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Server Bermasalah.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/recipes/like-recipe?recipeId=<integer>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"recipes",
+														"like-recipe"
+													],
+													"query": [
+														{
+															"key": "recipeId",
+															"value": "<integer>"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/recipes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/recipes?categoryId=1&search=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"recipes"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Berhasil dan mendapatkan list data Recipe.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/recipes?categoryId=<integer>&search=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"recipes"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<integer>"
+												},
+												{
+													"key": "search",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"categoryId\": \"<integer>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"priceEstimate\": \"<integer>\",\n    \"cookingTimeEstimate\": \"<integer>\",\n    \"image\": \"<string>\",\n    \"category\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"icon\": \"<string>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"categoryId\": \"<integer>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"priceEstimate\": \"<integer>\",\n    \"cookingTimeEstimate\": \"<integer>\",\n    \"image\": \"<string>\",\n    \"category\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string>\",\n      \"icon\": \"<string>\"\n    }\n  }\n]"
+								},
+								{
+									"name": "Permintaan tidak valid.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/recipes?categoryId=<integer>&search=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"recipes"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<integer>"
+												},
+												{
+													"key": "search",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized, User harus melakukan Sign-in terlebih dahulu.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/recipes?categoryId=<integer>&search=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"recipes"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<integer>"
+												},
+												{
+													"key": "search",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Data tidak ditemukan.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/recipes?categoryId=<integer>&search=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"recipes"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<integer>"
+												},
+												{
+													"key": "search",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Server Bermasalah.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/recipes?categoryId=<integer>&search=",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"recipes"
+											],
+											"query": [
+												{
+													"key": "categoryId",
+													"value": "<integer>"
+												},
+												{
+													"key": "search",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000"
+		}
+	]
+}
