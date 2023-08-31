@@ -1,3 +1,7 @@
+# Project Info
+⋅⋅* Backend API: ASP.NET Core Web API .NET 7.0
+⋅⋅* Mobile Android: Java Android Studio API 28: Android 9.0 (Pie)
+
 # EsemkaRecipes
 
 EsemkaRecipes is a culinary application designed for food lovers from all walks of life. With over
