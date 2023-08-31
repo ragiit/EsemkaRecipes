@@ -11,7 +11,7 @@ who want to prepare delicious dishes in their own kitchen.
 
 
 ## Login Screen
-<img src="https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg" width="250" height="250" />
+<img src="https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg" width="300" height="300" />
 ![Login Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg | width=100)
 
 
