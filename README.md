@@ -10,13 +10,12 @@ journey. From everyday meals to special dishes, EsemkaRecipes is a one-stop guid
 who want to prepare delicious dishes in their own kitchen.
 
 
-## Login Screen
-<img src="https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg" />
-![Login Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg | width=100)
+## Login Screen 
+![Login Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg)
 
 
 ## SignUp Screen
-![SignUp Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/2.%20Sign%20Up%20Screen.jpg =250x250)
+![SignUp Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/2.%20Sign%20Up%20Screen.jpg)
 
 
 ## Categories Screen
