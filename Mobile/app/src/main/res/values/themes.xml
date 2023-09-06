@@ -9,4 +9,12 @@
     </style>
 
     <style name="Theme.EsemkaRecipes" parent="Base.Theme.EsemkaRecipes" />
+
+    <style name="MaterialButtonStyleCustom">
+        <item name="cornerRadius">15dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/main</item>
+    </style>
 </resources>
