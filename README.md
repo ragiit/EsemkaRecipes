@@ -20,19 +20,16 @@ who want to prepare delicious dishes in their own kitchen.
 
 ## Categories Screen
 ![Categories Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/3.%20Main%20Screen%20-%20Categories.jpg)
-![MyProfile Screen Recipe Empty Liked Recipe](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/4.%20Main%20Screen%20-%20My%20Profile%20-%20Empty%20Like%20Recipe.jpg)
 
 
 ## MyProfile Screen 
 ![MyProfile Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/5.%20Main%20Screen%20-%20My%20Profile.jpg)
+![MyProfile Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/4.%20Main%20Screen%20-%20My%20Profile%20-%20Empty%20Like%20Recipe.jpg)
 
-
-## Recipe Screen Empty Recipe 
-![Recipe Screen Empty Recipe](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/6.%20Empty%20Recipe%20Screen.jpg)
-
-
+ 
 ## Recipe Screen
 ![Recipe Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/7.%20Recipe%20Screen.jpg)
+![Recipe Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/6.%20Empty%20Recipe%20Screen.jpg)
 
 
 ## Recipe Detail Screen
