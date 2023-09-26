@@ -15,7 +15,7 @@ who want to prepare delicious dishes in their own kitchen.
 
 
 ## SignUp Screen
-![SignUp Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/2.%20Sign%20Up%20Screen.jpg)
+![SignUp Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/2.%20Sign%20Up%20Screen.png)
 
 
 ## Categories Screen
