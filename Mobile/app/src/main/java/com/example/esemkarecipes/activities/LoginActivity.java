@@ -29,15 +29,15 @@ public class LoginActivity extends AppCompatActivity {
 //        binding.edtUsername.setText("ragiit");
 //        binding.edtPassword.setText("argi123");
 
-        binding.edtUsername.setText("dkiley3");
-        binding.edtPassword.setText("uO4tF2");
+        binding.edtUsername.getEditText().setText("dkiley3");
+        binding.edtPassword.getEditText().setText("uO4tF2");
 
 //        binding.edtUsername.setText("dkiley3");
 //        binding.edtPassword.setText("uO4tF2");
 
         binding.btnLogin.setOnClickListener(v -> {
-            String username = binding.edtUsername.getText().toString().trim();
-            String password = binding.edtPassword.getText().toString().trim();
+            String username = binding.edtUsername.getEditText().getText().toString().trim();
+            String password = binding.edtPassword.getEditText().getText().toString().trim();
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please insert the Username & Password!", Toast.LENGTH_SHORT).show();
             } else {

@@ -45,7 +45,7 @@ public class RecipesActivity extends AppCompatActivity {
             }
         }
 
-        binding.edtSearch.addTextChangedListener(new TextWatcher() {
+        binding.edtSearch.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -59,7 +59,7 @@ public class RecipesActivity extends AppCompatActivity {
                        runOnUiThread(new Runnable() {
                            @Override
                            public void run() {
-                               List<RecipeModel> search = recipeModels.stream().filter(x -> x.name.trim().toLowerCase().contains(binding.edtSearch.getText().toString().trim().toLowerCase())).collect(Collectors.toList());
+                               List<RecipeModel> search = recipeModels.stream().filter(x -> x.name.trim().toLowerCase().contains(binding.edtSearch.getEditText().getText().toString().trim().toLowerCase())).collect(Collectors.toList());
 
                                RecipeAdapter adapter = new RecipeAdapter(search);
                                binding.recyclerView.setAdapter(adapter);

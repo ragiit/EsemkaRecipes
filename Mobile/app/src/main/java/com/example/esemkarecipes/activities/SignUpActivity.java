@@ -53,11 +53,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void clickSignUp(View view) {
-        String username = binding.edtUsername.getText().toString().trim();
-        String fullName = binding.edtFullName.getText().toString().trim();
-        String password = binding.edtPassword.getText().toString().trim();
-        String confirmPassword = binding.edtConfirmPassword.getText().toString().trim();
-        String dateOfBirth = binding.edtDateOfBirth.getText().toString().trim();
+        String username = binding.edtUsername.getEditText().getText().toString().trim();
+        String fullName = binding.edtFullName.getEditText().getText().toString().trim();
+        String password = binding.edtPassword.getEditText().getText().toString().trim();
+        String confirmPassword = binding.edtConfirmPassword.getEditText().getText().toString().trim();
+        String dateOfBirth = binding.edtDateOfBirth.getEditText().getText().toString().trim();
 
         if (username.isEmpty() || fullName.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || dateOfBirth.isEmpty()) {
             Toast.makeText(this, "Field can't be Empty!", Toast.LENGTH_SHORT).show();
