@@ -11,7 +11,7 @@ who want to prepare delicious dishes in their own kitchen.
 
 
 ## Login Screen 
-![Login Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/1.%20Login%20Screen.jpg)
+![Login Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/1.%20Login%20Screen.png)
 
 
 ## SignUp Screen
@@ -19,19 +19,19 @@ who want to prepare delicious dishes in their own kitchen.
 
 
 ## Categories Screen
-![Categories Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/3.%20Main%20Screen%20-%20Categories.jpg)
+![Categories Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/3.%20Main%20Screen%20-%20Categories.png)
 
 
 ## MyProfile Screen 
-![MyProfile Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/5.%20Main%20Screen%20-%20My%20Profile.jpg)
-![MyProfile Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/4.%20Main%20Screen%20-%20My%20Profile%20-%20Empty%20Like%20Recipe.jpg)
+![MyProfile Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/4.%20Main%20Screen%20-%20My%20Profile%20-%20No%20Recipe%20Liked.png)
+![MyProfile Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/5.%20Main%20Screen%20-%20My%20Profile.png)
 
  
 ## Recipe Screen
-![Recipe Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/7.%20Recipe%20Screen.jpg)
-![Recipe Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/6.%20Empty%20Recipe%20Screen.jpg)
+![Recipe Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/6.%20Empty%20Recipe%20Screen.png)
+![Recipe Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/7.%20Recipe%20Screen.png)
 
 
 ## Recipe Detail Screen
-![Recipe Detail Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/8.%20Recipe%20Detail%20Screen.jpg)
-![Recipe Detail Screen 2](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/9.%20Recipe%20Detail%20Screen%202.jpg)
+![Recipe Detail Screen](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/8.%20Recipe%20Detail%20Screen.png)
+![Recipe Detail Screen 2](https://github.com/ragiit/EsemkaRecipes/blob/master/UI/v2/9.%20Recipe%20Detail%20Screen%202.png)
