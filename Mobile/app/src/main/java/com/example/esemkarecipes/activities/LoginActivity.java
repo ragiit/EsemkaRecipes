@@ -26,11 +26,11 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        binding.edtUsername.setText("ragiit");
-//        binding.edtPassword.setText("argi123");
+        binding.edtUsername.getEditText().setText("ragiit");
+        binding.edtPassword.getEditText().setText("argi123");
 
-        binding.edtUsername.getEditText().setText("dkiley3");
-        binding.edtPassword.getEditText().setText("uO4tF2");
+//        binding.edtUsername.getEditText().setText("dkiley3");
+//        binding.edtPassword.getEditText().setText("uO4tF2");
 
 //        binding.edtUsername.setText("dkiley3");
 //        binding.edtPassword.setText("uO4tF2");
