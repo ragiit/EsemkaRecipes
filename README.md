@@ -1,4 +1,4 @@
-# Project Info
+# Project Information
 * Backend API: ASP.NET Core Web API .NET 7.0
 * Mobile Android: Java Android Studio API 28: Android 9.0 (Pie)
 
